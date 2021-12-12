@@ -1,0 +1,487 @@
+/* Start Variables */
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ol, ul{
+    padding-left: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+p {
+    margin: 0 0 20px 0;
+    color: #646464;
+}
+svg{
+    width: 20px;
+    height: 20px;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* End Global Rules */
+
+/* Start Sidebar */
+.sidebar {
+    position: absolute;
+    top: 0;
+    background: #ffffff;
+    width: 45%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+}
+.logo {
+    width: 100%;
+    position: relative;
+    padding: 40px 30px;
+}
+.logo img {
+    width: 80px;
+}
+.menu-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.menu-items h3 {
+    color: #7f8a98;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0px 30px;
+    margin-bottom: 15px;
+}
+.menu-items a {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    color: #76879f;
+    padding: 10px 25px;
+    position: relative;;
+}
+.menu-items a svg {
+    margin-right: 15px;
+    fill: #76879f;
+}
+.menu-items a:hover, .menu-items .selected{
+    color: #d91921;
+}
+.menu-items a:hover:before, .menu-items .selected:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 3px;
+    bottom: 10px;
+    background: #d91921;
+}
+.menu-items a:hover svg ,.menu-items .selected svg {
+    fill: #d91921;
+}
+/* End Sidebar */
+
+/* Start Details */
+.main-page {
+    width: 100%;
+    position: relative;
+}
+.left {
+    width: 100%;
+}
+.series-cards {
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+.series-cards ul {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.series-cards ul li {
+    display: inline-block;
+}
+.series-cards ul li a {
+    color: #8c95a4;
+    font-size: 16px;
+    padding-right: 20px;
+    font-weight: 600;
+}
+.series-cards ul li .selected {
+    color: #353f57;
+}
+.series-cards .cards {
+    width: 100%;
+    position: relative;
+}
+.series-cards .card-img {
+    width: 100%;
+}
+.series-cards .cards img {
+    width: 100%;
+}
+.series-cards .card-details {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    color: #fff;
+}
+.series-cards .card-details h2 {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.series-cards .watch {
+    padding-top: 20px;
+}
+.series-cards .watch .watch-now, .series-cards .watch .plus {
+    background: #d91921;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: #fff;
+}
+.watched-cards {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.watched-head, .tr-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.watched-cards h3, .tr-head h3 {
+    font-size: 16px;
+    color: #353f57;
+    padding: 15px 5px;
+}
+.watched-head button, .top-rated button {
+    outline: none;
+    border: 1px solid #e9ecf4;
+    border-radius: 34px;
+    background: none;
+    color: #353f57;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+.watched-cards .cards {
+    position: relative;
+    padding: 5px;
+}
+.watched-cards .card-img {
+    height: 350px;
+    width: 100%;
+}
+.watched-cards .card-img img {
+    height: 100%;
+    width: 100%;
+}
+.watched-cards .plus {
+    background: #d91921;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.watched-cards .watch-now {
+    background: #d91921;
+    padding: 5px 20px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%);
+}
+.top-rated {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.top-rated .cards {
+    position: relative;
+    padding: 5px;
+}
+.top-rated .card-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.top-rated .card-img a:after {
+    background: linear-gradient( 
+180deg,rgba(0,0,0,0) 0,rgba(0,0,0,0) 44.79%,rgba(0,0,0,.35) 64%,#000000c2 100%);
+    top: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    content: '';
+}
+.top-rated .card-details {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    color: #fff;
+}
+.top-rated .card-details h3 {
+    font-size: 16px;
+}
+.top-rated .card-details span {
+    color: #747572;
+}
+.right {
+    width: 100%;
+    padding: 20px 10px;
+}
+#searchInput {
+    display: block;
+    padding: 12px 40px;
+    background: #f2f8ff;
+    border: 0;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    border-radius: 3px;
+}
+.search {
+    width: 100%;
+    max-width: 360px;
+}
+.searchForm {
+    width: 100%;
+    position: relative;
+}
+.searchButton {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border: none;
+    background: none;
+    outline: 0;
+    display: flex;
+    align-items: center;
+}
+.searchButton svg {
+    border: none;
+    fill: none;
+    stroke: #010c1c;
+    width: 18px;
+    height: 18px;
+}
+.list-series {
+        position: relative;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+.ls-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.ls-head h3 {
+    font-size: 14px;
+    color: #3b4460;
+}
+.ls-head svg {
+    fill: #77879e;
+    width: 16px;
+    height: 16px;
+}
+.ls-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.ls-img {
+    width: 70px;
+}
+.ls-box .details{
+    padding: 10px;
+}
+.ls-box h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.ls-box .category {
+    font-size: 12px;
+    color: #4c4c4c;
+}
+.see-more {
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    background: #d91921;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* End Details */
+
+/* Start Footer */
+/* End Footer */
+
+
+/* Start Mobile-Header */
+.mobile-header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 20px;
+    border-bottom: 1px solid #e9ecf4;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.mobile-header img {
+    width: 60px;
+}
+.mobile-header svg {
+    width: 18px;
+    height: 18px;
+}
+.sidebar.active {
+    display: block;
+    position: fixed;
+    overflow: scroll;
+}
+/* End Mobile-Header */
+
+
+/* Start Responsive */
+
+/* Small */
+@media (max-width: 479px){  
+    .series-cards .card-details{
+        padding: 10px;
+    }
+    .season{
+        font-size: 12px;
+    }
+    .series-cards .card-details h2 {
+        letter-spacing: 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 18px;
+    }
+    .category{
+        font-size: 12px;
+    }
+    .series-cards .watch {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .series-cards .watch .watch-now, .series-cards .watch .plus {
+        padding: 5px 10px;
+    font-size: 12px;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
+@media (min-width: 480px){  
+    .overlay {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        opacity: .6;
+        background-color: #000;
+        left: 0;
+    }
+    .overlay.show
+    {
+        display: block;
+    }
+}
+@media (min-width: 600px){
+}
+@media (max-width: 767px){}
+@media (min-width: 768px){
+}
+/* Medium */
+@media (min-width: 993px){
+.container {width: 970px;}
+.sidebar {
+    display: block;
+    width: 15%;
+}
+.main-page {
+    width: 85%;
+    float: right;
+    position: relative;
+}
+.left {
+    width: 75%;
+    padding: 40px;
+    border-right: 1px solid #e9ecf4;
+    border-left: 1px solid #e9ecf4;
+    float: left;
+}
+.series-cards ul {padding: 0;}
+.series-cards .watch .watch-now, .series-cards .watch .plus {
+    padding: 10px 30px;
+    font-size: 16px;
+}
+.right {
+    width: 25%;
+    float: right;
+    padding: 40px 20px;
+}
+.mobile-header{
+    display: none;
+}
+.overlay.show {
+    display: none;
+}
+}
+
+/* large */
+@media (min-width: 1200px){
+.container {width: 100%;}
+}
+/* End Responsive */
